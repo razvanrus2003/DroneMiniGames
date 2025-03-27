@@ -1,0 +1,4 @@
+/home/razvan/Documents/EGC/TankWars/cmake-build-debug/CMakeFiles/GFXFramework.dir
+/home/razvan/Documents/EGC/TankWars/cmake-build-debug/CMakeFiles/new_target.dir
+/home/razvan/Documents/EGC/TankWars/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/razvan/Documents/EGC/TankWars/cmake-build-debug/CMakeFiles/rebuild_cache.dir

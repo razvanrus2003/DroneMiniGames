@@ -80,9 +80,9 @@ file(GLOB_RECURSE GFXF_SOURCES
     #
     ${CMAKE_CURRENT_LIST_DIR}/src/main.cpp
     #
-    ${CMAKE_CURRENT_LIST_DIR}/src/lab_${SUFFIX_LAB_M1}/Tema1/*.c*
-#    ${CMAKE_CURRENT_LIST_DIR}/src/lab_${SUFFIX_LAB_M2}/*.c*
-#    ${CMAKE_CURRENT_LIST_DIR}/src/lab_${SUFFIX_LAB_EXTRA}/*.c*
+    ${CMAKE_CURRENT_LIST_DIR}/src/lab_${SUFFIX_LAB_M1}/*.c*
+    ${CMAKE_CURRENT_LIST_DIR}/src/lab_${SUFFIX_LAB_M2}/*.c*
+    ${CMAKE_CURRENT_LIST_DIR}/src/lab_${SUFFIX_LAB_EXTRA}/*.c*
 )
 
 
@@ -323,12 +323,25 @@ if (NOT USE_DEV_COMPONENTS)
         COMMAND ${CMAKE_COMMAND} -E copy_if_different "${GFXF_ROOT_DIR}/deps/prebuilt/GFXComponents/${__cmake_arch}/GFXComponents.${__cmake_shared_suffix}" "${__target_dir}"
     )
 endif()
-add_executable(new_target src/lab_m1/Tema1/main.cpp
-        src/lab_m1/Tema1/transform2D.h
-        src/lab_m1/Tema1/colors.h
-        src/lab_m1/Tema1/tank.cpp
-        src/lab_m1/Tema1/tank.h
-        src/lab_m1/Tema1/MeshGenerator.cpp
-        src/lab_m1/Tema1/MeshGenerator.h
-        src/lab_m1/Tema1/Ammo.cpp
-        src/lab_m1/Tema1/Ammo.h)
+add_executable(new_target
+        src/lab_m1/Tema2/DroneMain.cpp
+        src/lab_m1/Tema2/DroneMain.h
+        src/lab_m1/Tema2/droneUtil/colors.h
+        src/lab_m1/Tema2/Generator.cpp
+        src/lab_m1/Tema2/Generator.h
+        src/lab_m1/Tema2/Terrain.cpp
+        src/lab_m1/Tema2/Terrain.h
+        src/lab_m1/Tema2/droneUtil/trasform3d.h
+        src/lab_m1/Tema2/PhysicsEngine/Shapes/Sphere.cpp
+        src/lab_m1/Tema2/PhysicsEngine/Shapes/Sphere.h
+        src/lab_m1/Tema2/PhysicsEngine/Shapes/Cube.cpp
+        src/lab_m1/Tema2/PhysicsEngine/Shapes/Cube.h
+        src/lab_m1/Tema2/PhysicsEngine/physicsEngine.cpp
+        src/lab_m1/Tema2/PhysicsEngine/physicsEngine.h
+        src/lab_m1/Tema2/Drone.cpp
+        src/lab_m1/Tema2/Drone.h
+        src/lab_m1/Tema2/PhysicsEngine/Shapes/DroneHitBox.cpp
+        src/lab_m1/Tema2/PhysicsEngine/Shapes/DroneHitBox.h
+        src/lab_m1/Tema2/Tree.cpp
+        src/lab_m1/Tema2/Tree.h
+)
